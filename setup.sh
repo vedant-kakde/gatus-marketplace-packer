@@ -32,6 +32,13 @@ sudo apt-get upgrade -y
 if ! command -v docker &>/dev/null; then
     echo -e "${GREEN}Installing Docker...${NC}"
     curl -fsSL https://get.docker.com | sh
+    
+    # Enable and start Docker service
+    sudo systemctl enable docker
+    sudo systemctl start docker
+    
+    # Verify Docker is running
+    sudo systemctl status docker --no-pager || { echo -e "${RED}Failed to start Docker service${NC}"; exit 1; }
 fi
 
 # Install required tools for password hashing
