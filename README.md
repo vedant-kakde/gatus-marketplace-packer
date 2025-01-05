@@ -111,7 +111,7 @@ App variables are used to deploy and configure the application.
 
 ![image](https://github.com/user-attachments/assets/e7a68936-487b-4c96-9f53-40fdfea30666)
 
-10. Fill requested details to deploy the app (User-spupplied Variables - Required and Server hostnmae & Label - Optional)
+10. Fill requested details to deploy the app (User-supplied Variables - Required and Server hostname & Label - Optional)
 
 ![image](https://github.com/user-attachments/assets/0f046213-9684-432c-b73a-182972bc37b4)
 
