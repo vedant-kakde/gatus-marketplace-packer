@@ -39,13 +39,18 @@ build {
   }
 
   # Run cleanup operations
+#  provisioner "shell" {
+#    inline = [
+#      "chmod +x /root/vultr-helper.sh",
+#      "source /root/vultr-helper.sh",
+#      "chmod 644 /etc/cloud/cloud.cfg.d/99_gatus.cfg",
+#      "cloud-init clean",
+#      "clean_system"
+#    ]
+#  }
   provisioner "shell" {
-    inline = [
-      "chmod +x /root/vultr-helper.sh",
-      "source /root/vultr-helper.sh",
-      "chmod 644 /etc/cloud/cloud.cfg.d/99_gatus.cfg",
-      "cloud-init clean",
-      "clean_system"
-    ]
+    script = "helper.sh"
+    remote_folder = "/root"
+    remote_file = "helper.sh"
   }
 }
